@@ -2,7 +2,7 @@
 Student Search Engine
 
 # Stack
-PHP, SQL, HTML, and CSS were used to created a project that lets the user access an imaginary college database and edit it.
+PHP, SQL - MySQL, HTML, and CSS were used to created a project that lets the user access an imaginary college database and edit it.
 
 # Backend
 - PHP and SQL:  To create the backend, allowing the user,  read, add, delete, create, and update tables of students, modules, courses, etc.

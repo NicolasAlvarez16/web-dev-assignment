@@ -1,0 +1,397 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #535c68;
+}
+
+h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+    top: 90%;
+    left: 50%;
+    text-align: center;
+}
+
+::placeholder{
+    color: #dfe6e9;
+}
+
+.box{
+    width: 500px;
+    height: 140px;
+    padding: 30px;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    text-align: center;
+}
+
+.box input[type = "text"]{
+    border: 0;
+    background: none;
+    /* display: block; */
+    margin-left: -25px;
+    text-align: left;
+    border: 3px solid #fff200;
+    padding: 13px 10px;
+    width: 280px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    font-size: 14px;
+}
+
+.box input[type = "text"]:focus{
+    width: 300px;
+    border-color: #c56cf0;
+}
+
+.box button[name = "submit-search"]{
+    border: 0;
+    display: inline-block;
+    margin: 20px auto;
+    border: 3px solid #ff7979;
+    background: none;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box button[name = "submit-search"]:hover{
+    background:  #ff7979;
+}
+
+.box button[name = "home"]{
+    border: 0;
+    display: inline-block;
+    margin: 20px auto;
+    border: 3px solid #6c5ce7;
+    background: none;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box button[name = "home"]:hover{
+    background:  #6c5ce7;
+}
+
+body button[name = "add-row"]{
+    border: 0;
+    color: white;
+    background: none;
+    display: inline-block;
+    border: 3px solid #55efc4;
+    margin: 20px auto;
+    background: none;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 23px; 
+}
+
+body button[name = "add-row"]:hover{
+    background:  #55efc4;
+}
+
+body button[name = "edit-row"]{
+    border: 0;
+    color: white;
+    background: none;
+    display: inline-block;
+    border: 3px solid #55efc4;
+    margin: 20px auto;
+    background: none;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 23px; 
+}
+
+body button[name = "edit-row"]:hover{
+    background:  #55efc4;
+}
+
+.edit-table button[name = "questions"]{
+    border: 0;
+    color: white;
+    background: none;
+    display: inline-block;
+    border: 3px solid #fdcb6e;
+    margin: 20px auto;
+    margin-left: 10px;
+    background: none;
+    text-align: center;
+    color: white;
+    padding: 10px 20px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    font-size: 23px; 
+}
+
+.edit-table button[name = "questions"]:hover{
+    background:  #fdcb6e;
+}
+
+#table-div{
+    position: fixed;
+    width: 1000px;
+    height: 600px;
+    top: 40%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -500px; /* Negative half of width. */
+    overflow: auto;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+#table-div::-webkit-scrollbar{
+    display: none;
+    width: 0;
+}
+
+.content-table{
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 18px;
+    width: 1000px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0px 20px #aaaaaa;
+}
+
+.content-table thead th{
+    background-color: #00b894;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th, .content-table td{
+    padding: 12px 25px;
+}
+
+.content-table th{
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.content-table tbody tr{
+    background: #dfe6e9;
+    border-bottom: 1px solid black;
+}
+
+.content-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+    font-weight: bold;
+    color: #00b894;
+}
+
+.content-table tbody tr:last-of-type{
+    border-bottom: 4px solid #00b894;
+}
+
+#edit-table-container{
+    position: fixed;
+    width: 1200px;
+    height: 200px;
+    top: 30%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -500px; /* Negative half of width. */
+}
+
+.edit-table input[type = "text"]{
+    overflow: auto;
+    border: 0;
+    background: none;
+    margin-left: 13px;
+    text-align: left;
+    padding: 5px 10px; 
+    width: 160;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 15px;
+}
+
+.edit-table input[type = "text"]:focus{
+    outline: none;
+    width: 190;
+    border-bottom: 3px solid #00b894;
+}
+
+#edit-table-container select{
+    background: none;
+    border: 0;
+    margin-left: 13px;
+    text-align: left;
+    padding: 5px 10px; 
+    width: 160;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 15px;
+}
+
+#edit-table-container select:focus{
+    outline: none;
+    width: 190;
+    border-bottom: 3px solid #00b894;
+}
+
+#header-div{
+    position: fixed;
+    width: 1000px;
+    height: 600px;
+    top: 28%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -500px; /* Negative half of width. */
+}
+
+.exam-header{
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 18px;
+    width: 1000px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0px 20px #aaaaaa;
+}
+
+.exam-header thead th{
+    background-color: #00b894;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.exam-header th, .exam-header td{
+    padding: 12px 25px;
+}
+
+.exam-header th{
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.exam-header tbody tr{
+    background: #dfe6e9;
+    border-bottom: 1px solid black;
+}
+
+#table-questions-div{
+    position: fixed;
+    width: 1000px;
+    height: 500px;
+    top: 52%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -500px; /* Negative half of width. */
+    overflow: auto;
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+}
+
+#table-questions-div::-webkit-scrollbar{
+    display: none;
+    width: 0;
+}
+
+.content-questions-table{
+    border-collapse: collapse;
+    margin: 30px 0;
+    font-size: 18px;
+    width: 1000px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0 0px 20px #aaaaaa;
+}
+
+.content-questions-table thead th{
+    background-color: #00b894;
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-questions-table th, .content-exams-table td{
+    padding: 12px 25px;
+}
+
+.content-questions-table th{
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.content-questions-table tbody tr{
+    background: #dfe6e9;
+    border-bottom: 1px solid black;
+}
+
+.content-questions-table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+    font-weight: bold;
+    color: #00b894;
+}
+
+.content-questions-table tbody tr:last-of-type{
+    border-bottom: 4px solid #00b894;
+}
+
+#edit-table-questions-container{
+    position: fixed;
+    width: 1000px;
+    height: 50px;
+    top: 45%;
+    left: 50%;
+    margin-top: -100px; /* Negative half of height. */
+    margin-left: -500px; /* Negative half of width. */
+}
+
+.edit-table-questions input[type = "text"]{
+    overflow: auto;
+    border: 0;
+    background: none;
+    margin-left: 60px;
+    text-align: left;
+    padding: 5px 10px; 
+    width: 160;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 15px;
+}
+
+.edit-table-questions input[type = "text"]:focus{
+    outline: none;
+    width: 190;
+    border-bottom: 3px solid #00b894;
+}
